@@ -42,3 +42,16 @@ function changeRoute() {
     console.log(route_index);
 }
 setInterval(changeRoute, 1000 * 60 * 10);
+
+// travel all
+var r = Routes.regionRoutes;
+function changeRoute() {
+    MapHelper.moveToRoute(r[route_index].number, r[region_index].region);
+
+    route_index += 1;
+    if (route_index > r.length) {
+        route_index = 0;
+    }
+    console.log(route_index);
+}
+setInterval(changeRoute, 1000 * 60 * 5);
