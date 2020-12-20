@@ -26,3 +26,20 @@ function autohatch() {
 }
 
 let autoHatchId = setInterval(autohatch, 3000);
+
+// aotu trave
+// 0 = kanto, 1 = johto, 2 = heonn
+var region = 2; 
+var route_index = 0;
+var r = Routes.regionRoutes.filter(routeData => routeData.region == 2);
+function changeRoute() {
+    MapHelper.moveToRoute(r[route_index].number, region);
+
+    route_index += 1;
+    if (route_index > r.length) {
+        route_index = 0;
+    }
+    console.log(route_index);
+}
+setInterval(changeRoute, 1000 * 60 * 10);
+setInterval(changeRoute, 1000 * 60 * 10)
