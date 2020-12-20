@@ -27,7 +27,7 @@ function autohatch() {
 
 let autoHatchId = setInterval(autohatch, 3000);
 
-// aotu trave
+// auto trave
 // 0 = kanto, 1 = johto, 2 = heonn
 var region = 2; 
 var route_index = 0;
@@ -42,4 +42,3 @@ function changeRoute() {
     console.log(route_index);
 }
 setInterval(changeRoute, 1000 * 60 * 10);
-setInterval(changeRoute, 1000 * 60 * 10)
